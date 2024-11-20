@@ -7,19 +7,17 @@
 volume_summary(sim_results_df)
 }
 \arguments{
-\item{sim_results_df}{A data frame containing the simulation results with a 'volume' column.}
+\item{sim_results_df}{A data frame with `volume` and `surface` columns.}
 }
 \value{
-A character string summarizing the volume information.
+A named list with 99th percentile, mean, and standard deviation of volume and surface.
 }
 \description{
-Generates a summary for the volume data in the simulation results.
+Calculates and returns the volume summary statistics based on simulation results.
 }
 \examples{
-\dontrun{
-sim_results_df <- data.frame(volume = runif(100, min = 300, max = 1000))
+sim_results_df <- data.frame(volume = runif(100, 300, 1000), surface = runif(100, 50, 150))
 volume_summary(sim_results_df)
-}
 }
 \author{
 MarcelaChoque

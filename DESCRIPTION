@@ -17,7 +17,7 @@ Imports:
     rlang,
     shiny,
     stats
-Suggests: 
-    testthat (>= 3.0.0)
+Suggests:
+    testthat (>= 3.0.0),
     httptest
 Config/testthat/edition: 3

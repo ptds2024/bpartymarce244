@@ -7,7 +7,7 @@
 simulate_party(lambda)
 }
 \arguments{
-\item{lambda}{A numeric value representing the parameter for the Poisson distribution, which determines the number of guests.}
+\item{lambda}{A non-negative numeric value representing the parameter for the Poisson distribution.}
 }
 \value{
 A numeric vector with total ice cream volume and surface area.
