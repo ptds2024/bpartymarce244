@@ -1,4 +1,13 @@
-url: https://your-github-username.github.io/bpartymarce244
+url: https://ptds2024.github.io/bpartymarce244/
 template:
   bootstrap: 5
 
+reference:
+  - title: "Functions"
+    contents:
+      - check_city_validity
+      - plot_forecast
+      - run_app
+      - setup_api_key
+      - simulate_party
+      - volume_summary

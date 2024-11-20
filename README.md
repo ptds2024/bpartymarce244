@@ -1,6 +1,6 @@
 # bpartymarce244: Ice Cream Party and Weather Simulation Package
 
-[View the website here!](https://ptds2024.github.io/bpartymarce244)
+[View the website here!](https://ptds2024.github.io/bpartymarce244/)
 
 ------------------------------------------------------------------------
 
@@ -27,7 +27,8 @@ This package was developed as part of a programming tools assignment, combining 
 
 ------------------------------------------------------------------------
 
-## Installation
+## Installation:
+
 
 To install the `bpartymarce244` package, clone the repository and install it locally:
 
