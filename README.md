@@ -1,6 +1,6 @@
 # bpartymarce244: Ice Cream Party and Weather Simulation Package
 
-[View the website here!](https://ptds2024.github.io/bpartymarce244)
+[View the website here!](https://ptds2024.github.io/bpartymarce244/)
 
 ------------------------------------------------------------------------
 
