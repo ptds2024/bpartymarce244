@@ -87,7 +87,7 @@ run_app <- function(api_key = Sys.getenv("OPENWEATHERMAP_API_KEY")) {
 
       # Display message based on the selected parameter
       if (parameter == "Temperature") {
-        paste("Welcome to", city, "! The Temperature in", city, "is", current$main$temp, "°C.")
+        paste("Welcome to", city, "! The Temperature in", city, "is", current$main$temp, "\u00b0C.")
       } else if (parameter == "Humidity") {
         paste("Welcome to", city, "! The Humidity in", city, "is", current$main$humidity, "%.")
       } else if (parameter == "Pressure") {
@@ -154,7 +154,7 @@ run_app <- function(api_key = Sys.getenv("OPENWEATHERMAP_API_KEY")) {
       output$volume_summary_text <- shiny::renderText({
         paste0(
           "Ice Cream Volume: To satisfy the guests with a 99% chance, ",
-          "we will need approximately ", format(round(volume_99, 2), big.mark = ","), " cm³ of ice cream."
+          "we will need approximately ", format(round(volume_99, 2), big.mark = ","), " cm\u00b3 of ice cream."
         )
       })
 
@@ -162,7 +162,7 @@ run_app <- function(api_key = Sys.getenv("OPENWEATHERMAP_API_KEY")) {
       output$volume_histogram <- shiny::renderPlot({
         hist(sim_results_df$volume,
              main = "Histogram of Total Volume",
-             xlab = "Total Volume (cm³)",
+             xlab = "Total Volume (cm\u00b3)",
              col = "#E28B55",
              border = "white")
       })
@@ -171,7 +171,7 @@ run_app <- function(api_key = Sys.getenv("OPENWEATHERMAP_API_KEY")) {
       output$surface_summary_text <- shiny::renderText({
         paste0(
           "Coating Surface Area: To coat the cones with a 99% chance of sufficiency, ",
-          "we will need approximately ", format(round(surface_99, 2), big.mark = ","), " cm² of coating material."
+          "we will need approximately ", format(round(surface_99, 2), big.mark = ","), " cm\u00b2 of coating material."
         )
       })
 
@@ -179,7 +179,7 @@ run_app <- function(api_key = Sys.getenv("OPENWEATHERMAP_API_KEY")) {
       output$surface_histogram <- shiny::renderPlot({
         hist(sim_results_df$surface,
              main = "Histogram of Total Surface Area",
-             xlab = "Total Surface Area (cm²)",
+             xlab = "Total Surface Area (cm\u00b2)",
              col = "#DCB64D",
              border = "white")
       })

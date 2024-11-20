@@ -7,19 +7,19 @@
 check_city_validity(city_name, api_key)
 }
 \arguments{
-\item{city_name}{A character string representing the name of the city to verify.}
+\item{city_name}{A character string representing the name of the city.}
 
-\item{api_key}{Your OpenWeatherMap API key as a character string.}
+\item{api_key}{A character string containing the OpenWeatherMap API key.}
 }
 \value{
-A logical value: \code{TRUE} if the city is valid, \code{FALSE} otherwise.
+A logical value: `TRUE` if the city is valid, `FALSE` otherwise.
 }
 \description{
-Verifies if a given city name is valid in OpenWeatherMap's dataset.
+Verifies if a given city name is valid in the OpenWeatherMap API dataset.
 }
 \examples{
 \dontrun{
-valid <- check_city_validity("London", api_key = "your_api_key")
+check_city_validity("London", api_key = "your_api_key")
 }
 }
 \author{

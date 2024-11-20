@@ -2,29 +2,23 @@
 % Please edit documentation in R/plot_forecast.R
 \name{plot_forecast}
 \alias{plot_forecast}
-\title{Plot 5-Day Weather Forecast}
+\title{Plot Weather Forecast}
 \usage{
 plot_forecast(forecast_df, parameter)
 }
 \arguments{
-\item{forecast_df}{A data frame containing forecast data with columns \code{date_time}, \code{Temperature}, \code{Humidity}, and \code{Pressure}.}
+\item{forecast_df}{A data frame containing forecast data, including `date_time`, `Temperature`, `Humidity`, and `Pressure`.}
 
-\item{parameter}{A character string specifying the weather parameter to plot. Must be one of \code{"Temperature"}, \code{"Humidity"}, or \code{"Pressure"}.}
+\item{parameter}{A character string specifying the weather parameter to plot. Should be one of `Temperature`, `Humidity`, or `Pressure`.}
 }
 \value{
-A \code{ggplot} object representing the forecast plot.
+A `ggplot2` plot object.
 }
 \description{
-Creates a dynamic plot of the 5-day weather forecast for a specified parameter.
+Creates a plot of the 5-day weather forecast for a specified parameter.
 }
 \examples{
 \dontrun{
-forecast_df <- data.frame(
-  date_time = Sys.time() + seq(0, by = 3600, length.out = 5),
-  Temperature = runif(5, min = 10, max = 20),
-  Humidity = runif(5, min = 50, max = 100),
-  Pressure = runif(5, min = 1000, max = 1020)
-)
 plot_forecast(forecast_df, parameter = "Temperature")
 }
 }

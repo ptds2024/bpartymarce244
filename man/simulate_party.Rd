@@ -2,21 +2,21 @@
 % Please edit documentation in R/simulate_party.R
 \name{simulate_party}
 \alias{simulate_party}
-\title{Simulate Party Resources}
+\title{Simulate Ice Cream Party}
 \usage{
 simulate_party(lambda)
 }
 \arguments{
-\item{lambda}{The expected number of guests (rate parameter for the Poisson distribution).}
+\item{lambda}{A numeric value representing the parameter for the Poisson distribution, which determines the number of guests.}
 }
 \value{
-A numeric vector with total volume and total surface area.
+A numeric vector with total ice cream volume and surface area.
 }
 \description{
-Simulates the number of guests, required cones, and calculates total ice cream volume and coating surface area.
+Simulates the number of guests and calculates the total volume and surface area of ice cream cones required.
 }
 \examples{
-simulate_party(5)
+simulate_party(lambda = 10)
 }
 \author{
 MarcelaChoque

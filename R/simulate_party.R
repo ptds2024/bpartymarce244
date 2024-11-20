@@ -1,10 +1,16 @@
 #' @title Simulate Ice Cream Party
 #' @description Simulates the number of guests and calculates the total volume and surface area of ice cream cones required.
+#' @param lambda A non-negative numeric value representing the parameter for the Poisson distribution.
 #' @return A numeric vector with total ice cream volume and surface area.
 #' @examples
-#' simulate_party()
+#' simulate_party(lambda = 10)
+#' @author MarcelaChoque
 #' @export
 simulate_party <- function(lambda) {
+  if (!is.numeric(lambda) || lambda < 0) {
+    stop("Invalid lambda: must be a non-negative numeric value.")
+  }
+
   n_guests <- stats::rpois(1, lambda)
 
   cones_per_guest <- sample(c(1, 2), n_guests, replace = TRUE, prob = c(0.67, 0.33))
@@ -26,3 +32,4 @@ simulate_party <- function(lambda) {
 
   c(volume = total_volume, surface = total_surface)
 }
+

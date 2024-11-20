@@ -3,4 +3,6 @@
 export(check_city_validity)
 export(plot_forecast)
 export(run_app)
+export(setup_api_key)
 export(simulate_party)
+export(volume_summary)

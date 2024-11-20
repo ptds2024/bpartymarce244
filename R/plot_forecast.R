@@ -7,10 +7,16 @@
 #' \dontrun{
 #' plot_forecast(forecast_df, parameter = "Temperature")
 #' }
+#' @author MarcelaChoque
 #' @export
 plot_forecast <- function(forecast_df, parameter) {
+  valid_parameters <- c("Temperature", "Humidity", "Pressure")
+  if (!parameter %in% valid_parameters) {
+    stop("Invalid parameter. Must be one of: ", paste(valid_parameters, collapse = ", "))
+  }
+
   ggplot2::ggplot(forecast_df, ggplot2::aes(x = date_time, y = !!rlang::sym(parameter))) +
-    ggplot2::geom_line(color = "#439EB7", size = 1) +
+    ggplot2::geom_line(color = "#439EB7", linewidth = 1) +
     ggplot2::labs(
       title = paste("5-Day", parameter, "Forecast"),
       x = "Date and Time",

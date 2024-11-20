@@ -1,14 +1,16 @@
 #' @title Set OpenWeatherMap API Key
 #' @description Verifies and sets the OpenWeatherMap API key.
-#' @return No return value; raises an error if the API key is missing.
+#' @param key A character string representing the OpenWeatherMap API key. If not provided, it attempts to read the key from the environment variable `OPENWEATHERMAP_API_KEY`.
+#' @return The API key as a character string if it is valid.
 #' @examples
-#' setup_api_key()
+#' \dontrun{
+#' setup_api_key(key = "your_api_key_here")
+#' }
 #' @author MarcelaChoque
 #' @export
-setup_api_key <- function() {
-  api_key <- "YOUR_API_KEY_HERE"
-  if (nchar(api_key) == 0 || api_key == "YOUR_API_KEY_HERE") {
-    stop("API key not found. Please set your OpenWeatherMap API key.")
+setup_api_key <- function(key = Sys.getenv("OPENWEATHERMAP_API_KEY")) {
+  if (nchar(key) == 0 || key == "YOUR_API_KEY_HERE") {
+    stop("API key not found. Please provide a valid OpenWeatherMap API key or set it in the environment variable 'OPENWEATHERMAP_API_KEY'.")
   }
-  return(api_key)
+  return(key)
 }
