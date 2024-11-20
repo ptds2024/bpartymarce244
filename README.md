@@ -27,7 +27,8 @@ This package was developed as part of a programming tools assignment, combining 
 
 ------------------------------------------------------------------------
 
-## Installation
+## Installation:
+
 
 To install the `bpartymarce244` package, clone the repository and install it locally:
 
